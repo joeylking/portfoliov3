@@ -7,19 +7,32 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #222;
-  color:#fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  color: #fff;
 }
 
-@keyframes strike{
-  0%   { width : 0; }
-  100% { width: 100%; }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero {
+  background-image: url(img/mRrym.jpeg);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes strike {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .strike {
   position: relative;
@@ -36,5 +49,5 @@ body {
   animation-duration: 0.3s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards; 
+  animation-fill-mode: forwards;
 }
