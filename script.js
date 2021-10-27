@@ -24,10 +24,22 @@ function textSequence(i) {
         a.innerText = 'a ';
       }
       textSequence(++i);
-    }, 300); // 1 second (in milliseconds)
+    }, 200); // 1 second (in milliseconds)
   } //if (example.length  == i)
   else {
     sequence.classList.remove('strike');
     sequence.innerHTML = 'Software Engineer';
+  }
+}
+
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', fillNav);
+
+function fillNav() {
+  console.log(window.scrollY, nav.offsetHeight);
+  if (window.scrollY > nav.offsetHeight + 50) {
+    nav.classList.add('green');
+  } else {
+    nav.classList.remove('green');
   }
 }
