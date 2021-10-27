@@ -18,6 +18,14 @@ body {
   position: relative;
 }
 
+.container h3 {
+  color: #fff;
+  text-shadow: 1px 1px 2px fuchsia;
+  font-size: 30px;
+  margin-top: 55px;
+  text-align: center;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -40,6 +48,7 @@ body {
 .nav a {
   color: #fff;
   text-decoration: none;
+  font-size: 20px;
   padding: 7px 15px;
   transition: all 0.3s ease-in-out;
 }
@@ -79,12 +88,12 @@ body {
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 75px;
   margin: -20px 0 20px;
 }
 
 .hero p {
-  font-size: 25px;
+  font-size: 40px;
 }
 
 .strike {
@@ -105,8 +114,32 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  margin: 100px 20px;
 }
-.content img {
+.content p {
+  font-size: 25px;
+  margin: 20px 20px;
+  padding: 50px;
+}
+
+#about img {
+  max-width: 350px;
+}
+#projects img {
   max-width: 500px;
   margin: 20px 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#contact a {
+  margin-top: 200px;
+}
+
+#contact a i {
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #fff;
+  padding: 6px 8px;
 }

@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Joey King - Software Engineer</title>
   </head>
@@ -11,14 +18,14 @@
       <div class="container">
         <!-- <h1 class="joeyking"><a href="/index.html">Joey King</a></h1> -->
         <ul>
-          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <div class="hero">
+    <section class="hero" id="hero">
       <div class="container">
         <div class="howdy">
           <h1>Howdy, I'm Joey.</h1>
@@ -28,31 +35,44 @@
           I am <span id="a"></span><span id="sequence" class="strike"></span>.
         </p>
       </div>
-    </div>
-    <div class="container about">
+    </section>
+    <section class="container" id="about">
       <h3>About</h3>
       <div class="content">
         <img src="img/Joey.svg" alt="A picture of Joey" />
         <p>
           I'm a software engineer fusing creativity and logic. I have grit, an
-          insatiable curiosity, and passion for problem solving.<br />
+          insatiable curiosity, and a passion for problem solving.<br /><br />
           • HTML/CSS • JavaScript • Python • React.js • React Native • Redux •
-          Express.js • Node.js • MongoDB • MySQL<br />I live in Austin, TX with
-          my wife, our 4 year old son, and our dog.
+          Express.js • Node.js • MongoDB • MySQL<br /><br />
+          I live in Austin, TX with my wife, our 4 year old son, and our dog.
         </p>
       </div>
-    </div>
-    <div class="container projects">
+    </section>
+    <section class="container" id="projects">
       <h3>Projects</h3>
       <div class="content">
-        <img
-          src="img/moviesscreenshot.png"
-          alt="Screenshot of Movies project"
-        />
-        <img src="img/nasascreen.png" alt="Screenshot of NASA project" />
+        <div class="project-pair">
+          <img
+            src="img/moviesscreenshot.png"
+            alt="Screenshot of Movies project"
+          />
+          <img src="img/nasascreen.png" alt="Screenshot of NASA project" />
+        </div>
+        <div class="project-pair">
+          <img src="img/comingsoon.jpeg" alt="Coming soon" />
+          <img src="img/comingsoon.jpeg" alt="Coming soon" />
+        </div>
       </div>
-    </div>
-    <div class="container contact"><h3>Contact</h3></div>
+    </section>
+    <section class="container" id="contact">
+      <h3>Contact</h3>
+      <div class="content">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>

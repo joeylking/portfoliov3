@@ -10,8 +10,12 @@ const jobs = [
   'stay-at-home Dad',
   'truck driver',
 ];
+
+const nav = document.querySelector('.nav');
 const sequence = document.getElementById('sequence');
 const a = document.getElementById('a');
+const sections = document.querySelectorAll('section');
+console.log(sections);
 
 textSequence(0);
 function textSequence(i) {
@@ -32,8 +36,10 @@ function textSequence(i) {
   }
 }
 
-const nav = document.querySelector('.nav');
-window.addEventListener('scroll', fillNav);
+window.addEventListener('scroll', () => {
+  fillNav();
+  navHighlighter();
+});
 
 function fillNav() {
   console.log(window.scrollY, nav.offsetHeight);
@@ -42,4 +48,35 @@ function fillNav() {
   } else {
     nav.classList.remove('green');
   }
+}
+
+// window.addEventListener('scroll', navHighlighter);
+
+function navHighlighter() {
+  let scrollY = window.pageYOffset;
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+
+    const sectionTop =
+      current.getBoundingClientRect().top + window.pageYOffset - 200;
+    sectionId = current.getAttribute('id');
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector('.nav a[href*=' + sectionId + ']')
+        .classList.add('active');
+    } else if (window.scrollY > 1980) {
+      document
+        .querySelector('.nav a[href*=' + 'contact' + ']')
+        .classList.add('active');
+      document
+        .querySelector('.nav a[href*=' + 'projects' + ']')
+        .classList.remove('active');
+    } else {
+      document
+        .querySelector('.nav a[href*=' + sectionId + ']')
+        .classList.remove('active');
+    }
+  });
 }
