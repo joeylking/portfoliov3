@@ -128,8 +128,6 @@ body {
 #projects img {
   max-width: 500px;
   margin: 20px 20px;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 
 #contact a {

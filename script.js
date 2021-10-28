@@ -15,7 +15,6 @@ const nav = document.querySelector('.nav');
 const sequence = document.getElementById('sequence');
 const a = document.getElementById('a');
 const sections = document.querySelectorAll('section');
-console.log(sections);
 
 textSequence(0);
 function textSequence(i) {
@@ -28,9 +27,8 @@ function textSequence(i) {
         a.innerText = 'a ';
       }
       textSequence(++i);
-    }, 200); // 1 second (in milliseconds)
-  } //if (example.length  == i)
-  else {
+    }, 200);
+  } else {
     sequence.classList.remove('strike');
     sequence.innerHTML = 'Software Engineer';
   }
@@ -50,8 +48,6 @@ function fillNav() {
   }
 }
 
-// window.addEventListener('scroll', navHighlighter);
-
 function navHighlighter() {
   let scrollY = window.pageYOffset;
 
@@ -67,11 +63,9 @@ function navHighlighter() {
         .querySelector('.nav a[href*=' + sectionId + ']')
         .classList.add('active');
     } else if (window.scrollY > 1980) {
+      document.querySelector('.nav a[href*=contact]').classList.add('active');
       document
-        .querySelector('.nav a[href*=' + 'contact' + ']')
-        .classList.add('active');
-      document
-        .querySelector('.nav a[href*=' + 'projects' + ']')
+        .querySelector('.nav a[href*=projects]')
         .classList.remove('active');
     } else {
       document
