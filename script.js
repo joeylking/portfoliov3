@@ -40,7 +40,6 @@ window.addEventListener('scroll', () => {
 });
 
 function fillNav() {
-  console.log(window.scrollY, nav.offsetHeight);
   if (window.scrollY > nav.offsetHeight + 50) {
     nav.classList.add('green');
   } else {
